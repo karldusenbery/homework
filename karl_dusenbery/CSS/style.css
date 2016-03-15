@@ -1,3 +1,9 @@
 body {
-	background-color: cyan;
+	background-color: #C0C0C0;
+	color: #0000FF;
+}
+img {
+    width: 250px;
+    height: 250px;
+    border: 3px solid #73AD21;
 }
