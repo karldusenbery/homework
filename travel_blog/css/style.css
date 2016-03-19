@@ -5,6 +5,7 @@
 body{
 	font-family: 'Lato', sans-serif;
 	padding: 45px;
+	border: solid #D2D2D2 5px;
 }
 
 #section{
@@ -17,9 +18,29 @@ aside {
 	float: left;
 }
 
+header {
+	width: 100%;
+	align-content: center;
+	display: inline-block;
+}
+
+article p {
+	float: left;
+}
+
+article p span {
+	font-size: 118px;
+	color: #D2D2D2;
+	display: inline-block;
+	float: left;
+	text-align: top;
+	padding: none;
+	margin: none;
+}
 h2 {
 	color: #D2D2D2;
-	display: inline;
+	display: inline-block;
+	margin-bottom: 12px;
 }
 
 h1 a{
@@ -39,18 +60,21 @@ header h2 {
 
 header nav a {
 	color: #FFFFFF;
-	font-size: 30px;
+	font-size: 20px;
 	text-decoration: none;
-	padding: 10px;
+	padding: 25px;
 	background-color: #D2D2D2;
 	margin-top: 5px
 	margin-right: 1px;
 	display: inline-block;
+    text-align: center;
+    width: 16.333333%;
 }
 
 h3{
 	color: #D2D2D2;
 	font-size: 37px;
+	margin-bottom: 1px;
 }
 
 h2 a{
@@ -89,7 +113,7 @@ footer {
 	display: block;
 }
 
-.bottom{
+footer nav a {
 	display: inline; 
 	border-left: 2px solid;
 	border-color: #D2D2D2;
@@ -104,4 +128,8 @@ footer {
 #first { 
 	border-left: none; 
 	padding-left: 0; 
+}
+
+.module h4{
+
 }
