@@ -1,10 +1,10 @@
 /* ==========================================================================
    Global Overrides
   ========================================================================== */
-/** {
+* {
   box-sizing: border-box;
-  border: 1px solid red; 
-}*/
+  /*border: 1px solid red;*/ 
+}
 
 .clearfix:after {
   display: table;
@@ -91,6 +91,7 @@ header h1 {
   float: left;
   display: table-cell;
   vertical-align: middle;
+  font-family: 'Merriweather', serif;
 }
 
 header h1 a {
@@ -135,10 +136,20 @@ header nav li a {
   text-align: center;
 }
 
+.info a {
+  background: #d4e1db;
+  color: #080808;
+}
+
 .info {
   float: left;
-  width: 33.333333%;
+  width: 33.3333332%;
   padding: 20px;
+  border-right: 2px #3c3a3a;
+}
+
+.last_info{
+  border-right: none;
 }
 
 
