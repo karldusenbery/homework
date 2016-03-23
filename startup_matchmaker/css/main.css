@@ -3,7 +3,7 @@
   ========================================================================== */
 * {
   box-sizing: border-box;
-/*   border: 1px solid red; */
+  border: 1px solid red; 
 }
 
 .clearfix:after {
@@ -21,11 +21,11 @@
     (refer to styleguide.jpg for hex codes or use Sip to pick colors from design)
 
     White - #ffffff;
-    Light Grey -
-    Dark Grey -
-    Grey/Black(text color) -
-    Yellow -
-    Red -
+    Light Grey - #d4e1db
+    Dark Grey - #3c3a3a
+    Grey/Black(text color) - #080808
+    Yellow - #FEDB0D
+    Red - FF0121
 */
 
 
@@ -43,22 +43,79 @@ a {
 
 /* Layout (columns, floats, etc.)
    ================================================================ */
+header {
+  width: 100%;
+  background-color: #3c3a3a;
+}
 
+.tagline {
+  text-align: center;
+}
+
+.banner {
+  /*width: 100%;*/
+  background-image: url(../images/coworking.jpg);
+  background-position: 0px 0px, center;
+  background-repeat: repeat;
+  background-size: cover;
+  background-size: 1280px 282px;
+  /*background-size: 100% 100%;*/
+}
+
+.blurb {
+  float: right;
+  padding: 20px;
+  margin-right: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 
 /* Header
    ================================================================ */
+header h1 {
+  float: left;
+}
 
-
+header h1 a {
+  text-decoration: none;
+  color: #ffffff;
+}
 
 /* Footer
    ================================================================ */
-
+footer {
+  background-color: #3c3a3a;
+  clear: both;
+}
 
 
 /* Navigation
    ================================================================ */
+header nav {
+  float: right;
+}
 
+header nav li{
+  display: inline;
+}
+
+header nav li a {
+  text-decoration: none;
+  color: #ffffff;
+}
 
 
 /* Buttons
    ================================================================ */
+.buttons {
+  
+}
+
+.info {
+  float: left;
+  width: 33.333333%;
+  padding: 20px;
+}
+
+
+
