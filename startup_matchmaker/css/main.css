@@ -49,7 +49,7 @@ a {
 header {
 
   background-color: #3c3a3a;
-  border-bottom: 5px solid #DBDBDB;
+  border-bottom: 5px solid #E4C144;
   margin-bottom: 0px;
 }
 
@@ -71,7 +71,7 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0px;
-  border: 1px solid #DBDBDB;
+  border: 1px solid #080808;
 }
 
 .blurb {
@@ -81,7 +81,9 @@ header {
   margin-top: 130px;
   width: 425px;
   border: 1px solid #DBDBDB;
+  border-radius: 2px 2px 2px 2px;
   background: rgba(250, 250, 250, .75);
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }
 
 .blurb h2 {
@@ -100,20 +102,17 @@ header {
 
 /* Header
    ================================================================ */
-header h1 {
-  float: left;
-  font-family: 'Tinos', serif;
-}
-
-header strong {
-  font-family: 'Oswald', sans-serif;
-  font-size: 20px;
+header {
+  height: 50px;
 }
 
 header h1 a {
   text-decoration: none;
   color: #ffffff;
+  float: left;
   margin-left: 15px;
+  margin-top: 5px;
+  font-family: 'Tinos', serif;
   font-size: 30px;
 }
 
@@ -137,7 +136,8 @@ footer p {
    ================================================================ */
 header nav {
   float: right;
-  line-height: 50px;
+  margin-right: 20px;
+  margin-top: -12px;
 }
 
 header nav li{
@@ -145,9 +145,13 @@ header nav li{
   margin-right: 15px;
 }
 
+header strong {
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+}
 header nav li a {
   text-decoration: none;
-  color: #ffffff;
+  color: #EAEAEA;
   font-size: 20px;
 }
 
@@ -166,6 +170,7 @@ header nav li a {
   font-size: 20px;
   text-align: center;
   border-radius: 10px 10px 10px 10px;
+  box-shadow: 0px 0px 20px 0px rgba(77,77,77,1);
 }
 
 .info h3 {
