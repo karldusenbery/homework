@@ -80,11 +80,17 @@ $('#question2').on('click', function () {
 
 	// d) Add the active class to #question2
 	$('#question2').addClass('active');
-})
+});
 
 
 // 11. When #question1 is clicked:
+$('#question1').on('click', function () {
 	// a) Slide down #answer1
+	$('answer1').slideDown(500);
 	// b) Slide up #answer2
+	$('answer2').slideUp(500);
 	// c) Remove the active class from all list items
+	$('li').removeClass('active');
 	// d) Add the active class to #question1
+	$('#question1').addClass('active');
+});
