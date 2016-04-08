@@ -30,14 +30,29 @@ $('#fahrenheit_to_celsius').on('click', function () {
 
 		else {
 			//actually convert the tempurature from Fahrenheit to Celsius, and store it in a new varible called convertedTemp
-			var convertedTemp = ((userTemp - 32) / 1.8); 
+			var convertedTemp = ((userTemp - 32) / 1.8);
+			convertedTemp = convertedTemp.toFixed(2)
 
 			/*display the tempurature that the user inputted in Celcius as #result
 			on the left it will display userTemp (Fahrenheit temp value)
 			on the right it will display the converted tempurature in Celsius
 			*/
 			$( "#error" ).hide()
-			$('#result').html(userTemp + " Fahrenheit is " + convertedTemp + " Celsius.");	
+			$('#result').html(userTemp + " Fahrenheit is " + convertedTemp + " Celsius.");
+
+			//-----change background color according to temp------//
+
+			//if tempurature is less than 70, color is light-blue
+
+			//if tempurature is less than 50, color is dark-blue
+			if (userTemp < 70 ) {
+				$('body').addClass('dark-blue-background');
+			}
+
+			//if tempurature is 70 or above, color is pink
+
+			//if tempurature is 90 or above, color is red
+
 		}
 	}
 });
