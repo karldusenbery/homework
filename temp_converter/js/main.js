@@ -42,17 +42,25 @@ $('#fahrenheit_to_celsius').on('click', function () {
 
 			//-----change background color according to temp------//
 
-			//if tempurature is less than 70, color is light-blue
+			//if tempurature is 50 or greater, and less than 70, color is light-blue
+			if (userTemp < 70 && userTemp >= 50) {
+				$('body').addClass('light-blue-background');
+			}
 
 			//if tempurature is less than 50, color is dark-blue
-			if (userTemp < 70 ) {
+			else if (userTemp < 50 ) {
 				$('body').addClass('dark-blue-background');
 			}
 
-			//if tempurature is 70 or above, color is pink
+			//if tempurature is 70 or greater, and less than 90, color is pink
+			else if (userTemp >= 70 && userTemp < 90 ) {
+				$('body').addClass('pink-background');
+			}
 
 			//if tempurature is 90 or above, color is red
-
+			else if (userTemp >= 90 ) {
+				$('body').addClass('red-background');
+			}
 		}
 	}
 });
