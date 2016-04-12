@@ -107,14 +107,19 @@ $('#celsius_to_fahrenheit').on('click', function () {
 	Change background color based on Fahrenheit values. 
 */
 function changeBackgroundColor (temp) {
-	//if tempurature is 50 or greater, and less than 70, color is light-blue
-	if (temp < 70 && temp >= 50) {
-		$('body').addClass('light-blue-background');
-	}
+	$('body').removeClass('dark-blue-background');
+	$('body').removeClass('light-blue-background');
+	$('body').removeClass('pink-background');
+	$('body').removeClass('red-background');
 
 	//if tempurature is less than 50, color is dark-blue
-	else if (temp < 50 ) {
+	if (temp < 50 ) {
 		$('body').addClass('dark-blue-background');
+	}
+
+	//if tempurature is 50 or greater, and less than 70, color is light-blue
+	else if (temp < 70 && temp >= 50) {
+		$('body').addClass('light-blue-background');
 	}
 
 	//if tempurature is 70 or greater, and less than 90, color is pink
