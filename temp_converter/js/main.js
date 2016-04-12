@@ -45,26 +45,7 @@ $('#fahrenheit_to_celsius').on('click', function () {
 			$('#result').html(userTemp + " Fahrenheit is " + convertedTemp + " Celsius.");
 
 			//-----change background color according to temp------//
-
-			//if tempurature is 50 or greater, and less than 70, color is light-blue
-			if (userTemp < 70 && userTemp >= 50) {
-				$('body').addClass('light-blue-background');
-			}
-
-			//if tempurature is less than 50, color is dark-blue
-			else if (userTemp < 50 ) {
-				$('body').addClass('dark-blue-background');
-			}
-
-			//if tempurature is 70 or greater, and less than 90, color is pink
-			else if (userTemp >= 70 && userTemp < 90 ) {
-				$('body').addClass('pink-background');
-			}
-
-			//if tempurature is 90 or above, color is red
-			else if (userTemp >= 90 ) {
-				$('body').addClass('red-background');
-			}
+			changeBackgroundColor(userTemp);
 		}
 	}
 });
@@ -117,26 +98,32 @@ $('#celsius_to_fahrenheit').on('click', function () {
 			$('#result').html(userTemp + " Celcius is " + convertedTemp + " Fahrenheit.");
 
 			//-----change background color according to temp------//
-
-			//if tempurature is 50 or greater, and less than 70, color is light-blue
-			if (convertedTemp < 70 && convertedTemp >= 50) {
-				$('body').addClass('light-blue-background');
-			}
-
-			//if tempurature is less than 50, color is dark-blue
-			else if (convertedTemp < 50 ) {
-				$('body').addClass('dark-blue-background');
-			}
-
-			//if tempurature is 70 or greater, and less than 90, color is pink
-			else if (convertedTemp >= 70 && convertedTemp < 90 ) {
-				$('body').addClass('pink-background');
-			}
-
-			//if tempurature is 90 or above, color is red
-			else if (convertedTemp >= 90 ) {
-				$('body').addClass('red-background');
-			}
+			changeBackgroundColor(convertedTemp);
 		}
 	}
 });
+
+/*
+	Change background color based on Fahrenheit values. 
+*/
+function changeBackgroundColor (temp) {
+	//if tempurature is 50 or greater, and less than 70, color is light-blue
+	if (temp < 70 && temp >= 50) {
+		$('body').addClass('light-blue-background');
+	}
+
+	//if tempurature is less than 50, color is dark-blue
+	else if (temp < 50 ) {
+		$('body').addClass('dark-blue-background');
+	}
+
+	//if tempurature is 70 or greater, and less than 90, color is pink
+	else if (temp >= 70 && temp < 90 ) {
+		$('body').addClass('pink-background');
+	}
+
+	//if tempurature is 90 or above, color is red
+	else if (temp >= 90 ) {
+		$('body').addClass('red-background');
+	}
+}
