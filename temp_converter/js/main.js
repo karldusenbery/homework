@@ -1,3 +1,5 @@
+
+//------------------------------------------------ Event Listeners ----------------------------------------------------//
 /*
   *
 	When the user clicks on the "F to C" button 
@@ -59,6 +61,7 @@ $('#celsius_to_fahrenheit').on('click', function () {
 	}
 });
 
+//--------------------------------------------------- Functions -------------------------------------------------------//
 /*
 	Change background color based on Fahrenheit values. 
 */
