@@ -8,45 +8,23 @@ $('#fahrenheit_to_celsius').on('click', function () {
 	var userTemp = $('#temperature').val();
 	console.log("value of userTemp right before parseFloat: " + userTemp);
 
-	if (userTemp === "") {
+	//check the inputted value
+	checkInput(userTemp);
 
-		if ( $( "#error" ).hasClass( "errorMessage") ) {
-			$( "#error" ).hide()
-			$( "#temperature" ).addClass( "error").fadeIn(500);
-		}
-		else {
-			$( "#temperature" ).addClass( "error").fadeIn(500);
-		}
-	}
+	if (checkInput(userTemp) ===  true) {
+		//actually convert the tempurature from Fahrenheit to Celsius, and store it in a new varible called convertedTemp
+		var convertedTemp = ((userTemp - 32) / 1.8);
+		convertedTemp = convertedTemp.toFixed(2)
 
-	else {
-		$( "#temperature" ).removeClass( "error")
-		// convert the varible userTemp to the datatye number (parseFloat) with 2 decimal places.
-		userTemp = parseFloat(userTemp).toFixed(2);
-		console.log("value of userTemp right after parseFloat: " + userTemp);
+		/*display the tempurature that the user inputted in Celcius as #result
+		on the left it will display userTemp (Fahrenheit temp value)
+		on the right it will display the converted tempurature in Celsius
+		*/
+		$( "#error" ).hide()
+		$('#result').html(userTemp + " Fahrenheit is " + convertedTemp + " Celsius.");
 
-		if (userTemp === "NaN") {
-			$( "#error" ).addClass( "errorMessage").fadeIn(500);
-			$( "#temperature" ).addClass( "error").fadeIn(500)
-		}
-
-		
-
-		else {
-			//actually convert the tempurature from Fahrenheit to Celsius, and store it in a new varible called convertedTemp
-			var convertedTemp = ((userTemp - 32) / 1.8);
-			convertedTemp = convertedTemp.toFixed(2)
-
-			/*display the tempurature that the user inputted in Celcius as #result
-			on the left it will display userTemp (Fahrenheit temp value)
-			on the right it will display the converted tempurature in Celsius
-			*/
-			$( "#error" ).hide()
-			$('#result').html(userTemp + " Fahrenheit is " + convertedTemp + " Celsius.");
-
-			//-----change background color according to temp------//
-			changeBackgroundColor(userTemp);
-		}
+		//-----change background color according to temp------//
+		changeBackgroundColor(userTemp);		
 	}
 });
 
@@ -61,45 +39,23 @@ $('#celsius_to_fahrenheit').on('click', function () {
 	var userTemp = $('#temperature').val();
 	console.log("value of userTemp right before parseFloat: " + userTemp);
 
-	if (userTemp === "") {
+	//check the inputted value
+	checkInput(userTemp);
 
-		if ( $( "#error" ).hasClass( "errorMessage") ) {
-			$( "#error" ).hide()
-			$( "#temperature" ).addClass( "error").fadeIn(500);
-		}
-		else {
-			$( "#temperature" ).addClass( "error").fadeIn(500);
-		}
-	}
+	if (checkInput(userTemp) ===  true) {
+		//actually convert the tempurature from Fahrenheit to Celsius, and store it in a new varible called convertedTemp
+		var convertedTemp = (1.8 * userTemp + 32);
+		convertedTemp = convertedTemp.toFixed(2)
 
-	else {
-		$( "#temperature" ).removeClass( "error")
-		// convert the varible userTemp to the datatye number (parseFloat) with 2 decimal places.
-		userTemp = parseFloat(userTemp).toFixed(2);
-		console.log("value of userTemp right after parseFloat: " + userTemp);
+		/*display the tempurature that the user inputted in Celcius as #result
+		on the left it will display userTemp (Fahrenheit temp value)
+		on the right it will display the converted tempurature in Celsius
+		*/
+		$( "#error" ).hide()
+		$('#result').html(userTemp + " Celcius is " + convertedTemp + " Fahrenheit.");
 
-		if (userTemp === "NaN") {
-			$( "#error" ).addClass( "errorMessage").fadeIn(500);
-			$( "#temperature" ).addClass( "error").fadeIn(500)
-		}
-
-		
-
-		else {
-			//actually convert the tempurature from Fahrenheit to Celsius, and store it in a new varible called convertedTemp
-			var convertedTemp = (1.8 * userTemp + 32);
-			convertedTemp = convertedTemp.toFixed(2)
-
-			/*display the tempurature that the user inputted in Celcius as #result
-			on the left it will display userTemp (Fahrenheit temp value)
-			on the right it will display the converted tempurature in Celsius
-			*/
-			$( "#error" ).hide()
-			$('#result').html(userTemp + " Celcius is " + convertedTemp + " Fahrenheit.");
-
-			//-----change background color according to temp------//
-			changeBackgroundColor(convertedTemp);
-		}
+		//-----change background color according to temp------//
+		changeBackgroundColor(convertedTemp);
 	}
 });
 
@@ -130,5 +86,41 @@ function changeBackgroundColor (temp) {
 	//if tempurature is 90 or above, color is red
 	else if (temp >= 90 ) {
 		$('body').addClass('red-background');
+	}
+}
+
+/*
+	Form validation
+*/
+function checkInput (input) {
+
+	if (input === "") {
+
+		if ( $( "#error" ).hasClass( "errorMessage") ) {
+			$( "#error" ).hide()
+			$( "#temperature" ).addClass( "error").fadeIn(500);
+		}
+		else {
+			$( "#temperature" ).addClass( "error").fadeIn(500);
+		}
+		return false;
+	}
+
+	else {
+		$( "#temperature" ).removeClass( "error")
+
+		// convert the varible userTemp to the datatye number (parseFloat) with 2 decimal places.
+		input = parseFloat(input).toFixed(2);
+		console.log("value of userTemp right after parseFloat: " + input);
+
+		if (input === "NaN") {
+			$( "#error" ).addClass( "errorMessage").fadeIn(500);
+			$( "#temperature" ).addClass( "error").fadeIn(500)
+			return false;
+		}
+
+		else {
+			return true;
+		}
 	}
 }
