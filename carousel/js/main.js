@@ -14,12 +14,11 @@ $('#next').on('click', function() {
 		$('#prev').attr('enabled', 'enabled');
 	}
 
-
 	//add 1 to the currentPosition
 	currentPosition += 1;
 
 	//if currentPosition is last image, disable the Next button.
-	if (currentPosition === (images.length)) {
+	if (currentPosition === (images.length - 1 )) {
 		//disable the Next button
 		$('#next').attr('disabled', 'disabled');
 	}
@@ -31,5 +30,7 @@ $('#next').on('click', function() {
 
 
 // Advance to the previous image when user clicks on the previous button
+
+
 // When the user clicks on the thumbsUp button, add a like on the current image.
 // When the user clicks on the thumbsDown button, remove a like on the current image.
