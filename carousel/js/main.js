@@ -29,9 +29,15 @@ $('#prev').on('click', function() {
 	//subtract 1 to the currentPosition
 	currentPosition -= 1;
 
-	//If the currentPosition is not the first image, enabel the Previous button
+	//If the currentPosition is not the first image, enable the Previous button
 	if (currentPosition > 0){
 		$('#prev').removeAttr('disabled');
+	}
+
+	//If the currentPosition is the first image, re-enable the Next button, and disable the Previous button
+	if (currentPosition === 1){
+		$('#next').removeAttr('disabled');
+		$('#prev').attr('disabled', 'disabled');
 	}
 
 	//change the src of #image-to-vote-on to image at that index
