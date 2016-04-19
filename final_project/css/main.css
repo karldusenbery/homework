@@ -100,7 +100,7 @@ textarea {
            ================================================================ */
         header {
 
-          background-color: #3c3a3a;
+          background-color: #ED9A16;
           border-bottom: 5px solid #E4C144;
           margin-bottom: 0px;
         }
@@ -118,7 +118,7 @@ textarea {
 
         .banner {
           height: 475px;
-          background-image: url(../images/coworking.jpg);
+          background-image: url(../img/chicago.jpeg);
           background-position: center, center;
           background-repeat: no-repeat;
           background-size: cover;
@@ -130,7 +130,7 @@ textarea {
           float: right;
           padding: 20px;
           margin-right: 35px;
-          margin-top: 130px;
+          margin-top: 70px;
           width: 425px;
           border: 1px solid #DBDBDB;
           border-radius: 2px 2px 2px 2px;
@@ -159,12 +159,19 @@ textarea {
           margin-top: 0px;
         }
 
+        header img {
+            float: left;
+            margin-left: 15px;
+            margin-top: 5px;
+            border-radius: 10px 10px 10px 10px;
+        }
+
         header h1 a {
           text-decoration: none;
-          color: #ffffff;
+          color: #272822;
           float: left;
           margin-left: 15px;
-          margin-top: 5px;
+          margin-top: -15px;
           font-family: 'Tinos', serif;
           font-size: 30px;
         }
@@ -192,7 +199,7 @@ textarea {
         header nav {
           float: right;
           margin-right: 20px;
-          margin-top: -12px;
+          margin-top: -28px;
         }
 
         header nav li{
@@ -206,7 +213,7 @@ textarea {
         }
         header nav li a {
           text-decoration: none;
-          color: #EAEAEA;
+          color: #272822;
           font-size: 20px;
         }
 
@@ -249,6 +256,14 @@ textarea {
 
         .last_info{
           border-right: none;
+        }
+
+        #login {
+            background: #d4e1db;
+            color: #080808;
+            padding: 4px;
+            border-radius: 5px 5px 5px 5px;
+            box-shadow: 0px 0px 10px 0px rgba(77,77,77,1);
         }
 
 
